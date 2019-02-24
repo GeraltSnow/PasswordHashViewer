@@ -32,7 +32,6 @@ Partial Class MainForm
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.ListViewUsers = New System.Windows.Forms.ListView()
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -56,7 +55,6 @@ Partial Class MainForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.SQLServer = New System.Windows.Forms.TextBox()
         Me.SQLUserList = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -151,7 +149,7 @@ Partial Class MainForm
         Me.ListViewUsers.AllowDrop = True
         Me.ListViewUsers.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ListViewUsers.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader3, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10})
+        Me.ListViewUsers.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10})
         Me.ListViewUsers.ContextMenuStrip = Me.UserListViewContextMenuStrip
         Me.ListViewUsers.FullRowSelect = True
         Me.ListViewUsers.HideSelection = False
@@ -165,30 +163,25 @@ Partial Class MainForm
         Me.ListViewUsers.UseCompatibleStateImageBehavior = False
         Me.ListViewUsers.View = System.Windows.Forms.View.Details
         '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "GUID"
-        Me.ColumnHeader3.Width = 216
-        '
         'ColumnHeader7
         '
         Me.ColumnHeader7.Text = "Имя пользователя"
-        Me.ColumnHeader7.Width = 126
+        Me.ColumnHeader7.Width = 250
         '
         'ColumnHeader8
         '
         Me.ColumnHeader8.Text = "Хэш пароля в нижнем регистре"
-        Me.ColumnHeader8.Width = 195
+        Me.ColumnHeader8.Width = 220
         '
         'ColumnHeader9
         '
         Me.ColumnHeader9.Text = "Хэш пароля в верхнем регистре"
-        Me.ColumnHeader9.Width = 202
+        Me.ColumnHeader9.Width = 220
         '
         'ColumnHeader10
         '
         Me.ColumnHeader10.Text = "Адм. Роль"
-        Me.ColumnHeader10.Width = 81
+        Me.ColumnHeader10.Width = 80
         '
         'UserListViewContextMenuStrip
         '
@@ -366,7 +359,7 @@ Partial Class MainForm
         Me.SQLUserList.AllowDrop = True
         Me.SQLUserList.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SQLUserList.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
+        Me.SQLUserList.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader2, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
         Me.SQLUserList.ContextMenuStrip = Me.SQLUserListViewContextMenuStrip
         Me.SQLUserList.FullRowSelect = True
         Me.SQLUserList.HideSelection = False
@@ -380,25 +373,20 @@ Partial Class MainForm
         Me.SQLUserList.UseCompatibleStateImageBehavior = False
         Me.SQLUserList.View = System.Windows.Forms.View.Details
         '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "GUID"
-        Me.ColumnHeader1.Width = 216
-        '
         'ColumnHeader2
         '
         Me.ColumnHeader2.Text = "Имя пользователя"
-        Me.ColumnHeader2.Width = 126
+        Me.ColumnHeader2.Width = 250
         '
         'ColumnHeader4
         '
         Me.ColumnHeader4.Text = "Хэш пароля в нижнем регистре"
-        Me.ColumnHeader4.Width = 195
+        Me.ColumnHeader4.Width = 220
         '
         'ColumnHeader5
         '
         Me.ColumnHeader5.Text = "Хэш пароля в верхнем регистре"
-        Me.ColumnHeader5.Width = 202
+        Me.ColumnHeader5.Width = 220
         '
         'ColumnHeader6
         '
@@ -469,7 +457,6 @@ Partial Class MainForm
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents SQLUserList As ListView
-    Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents ColumnHeader5 As ColumnHeader
@@ -488,7 +475,6 @@ Partial Class MainForm
     Friend WithEvents SQLInstance As TextBox
     Friend WithEvents ColumnHeader6 As ColumnHeader
     Friend WithEvents ListViewUsers As ListView
-    Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents ColumnHeader7 As ColumnHeader
     Friend WithEvents ColumnHeader8 As ColumnHeader
     Friend WithEvents ColumnHeader9 As ColumnHeader

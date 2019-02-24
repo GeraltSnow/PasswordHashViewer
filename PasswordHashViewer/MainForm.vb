@@ -101,8 +101,8 @@ Public Class MainForm
 
             'pretty crapy code here..
             If AuthStructure(0)(7) = "0" Then
-                Row.Add("UserPassHash", "")
-                Row.Add("UserPassHash2", "")
+                Row.Add("UserPassHash", "---")
+                Row.Add("UserPassHash2", "---")
             Else
                 If AuthStructure(0).Count = 17 Or TableParams.DatabaseVersion = "8.3.8" Then
                     Row.Add("UserPassHash", Replace(AuthStructure(0)(11).ToString, """", ""))
@@ -114,9 +114,8 @@ Public Class MainForm
             End If
 
 
-            Dim itemUserList = New ListViewItem(G.ToString)
+            Dim itemUserList = New ListViewItem(Row("NAME").ToString)
 
-            itemUserList.SubItems.Add(Row("NAME").ToString)
             'itemUserList.SubItems.Add(PassHash)
             'itemUserList.SubItems.Add(PassHash2)
             itemUserList.SubItems.Add(Row("UserPassHash").ToString)
@@ -171,7 +170,7 @@ Public Class MainForm
 
                     If AuthStructure(0)(7).ToString = "0" Then
                         'нет авторизации 1С
-                        SQLUser.PassHash = "нет авторизации 1С"
+                        SQLUser.PassHash = "---"
                     Else
                         If AuthStructure(0).Count = 17 Then
                             SQLUser.PassHash = Replace(AuthStructure(0)(11).ToString, """", "")
@@ -209,9 +208,8 @@ Public Class MainForm
                 Continue For
             End If
 
-            Dim itemUserList = New ListViewItem(Row.IDStr)
+            Dim itemUserList = New ListViewItem(Row.Name)
 
-            itemUserList.SubItems.Add(Row.Name)
             itemUserList.SubItems.Add(Row.PassHash)
             itemUserList.SubItems.Add(Row.PassHash2)
             itemUserList.SubItems.Add(Row.AdmRole)
