@@ -64,6 +64,11 @@ Partial Class MainForm
         Me.SQLCopySecondHashMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.CopyFirstHashHEXMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopySecondHashHEXMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SQLCopyFirstHashHEXMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SQLCopySecondHashHEXMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.UserListViewContextMenuStrip.SuspendLayout()
@@ -185,22 +190,22 @@ Partial Class MainForm
         '
         'UserListViewContextMenuStrip
         '
-        Me.UserListViewContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyFirstHashMenuItem, Me.CopySecondHashMenuItem})
+        Me.UserListViewContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyFirstHashMenuItem, Me.CopySecondHashMenuItem, Me.CopyFirstHashHEXMenuItem, Me.CopySecondHashHEXMenuItem})
         Me.UserListViewContextMenuStrip.Name = "UserListViewContextMenuStrip"
-        Me.UserListViewContextMenuStrip.Size = New System.Drawing.Size(217, 48)
+        Me.UserListViewContextMenuStrip.Size = New System.Drawing.Size(264, 92)
         Me.UserListViewContextMenuStrip.Text = "Выделенный элемент"
         '
         'CopyFirstHashMenuItem
         '
         Me.CopyFirstHashMenuItem.Name = "CopyFirstHashMenuItem"
-        Me.CopyFirstHashMenuItem.Size = New System.Drawing.Size(216, 22)
-        Me.CopyFirstHashMenuItem.Text = "Скопировать первый хэш"
+        Me.CopyFirstHashMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.CopyFirstHashMenuItem.Text = "Скопировать первый хэш (Base64)"
         '
         'CopySecondHashMenuItem
         '
         Me.CopySecondHashMenuItem.Name = "CopySecondHashMenuItem"
-        Me.CopySecondHashMenuItem.Size = New System.Drawing.Size(216, 22)
-        Me.CopySecondHashMenuItem.Text = "Скопировать второй хэш"
+        Me.CopySecondHashMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.CopySecondHashMenuItem.Text = "Скопировать второй хэш (Base64)"
         '
         'LabelDatabaseVersion
         '
@@ -395,22 +400,22 @@ Partial Class MainForm
         '
         'SQLUserListViewContextMenuStrip
         '
-        Me.SQLUserListViewContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SQLCopyFirstHashMenuItem, Me.SQLCopySecondHashMenuItem})
+        Me.SQLUserListViewContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SQLCopyFirstHashMenuItem, Me.SQLCopySecondHashMenuItem, Me.SQLCopyFirstHashHEXMenuItem, Me.SQLCopySecondHashHEXMenuItem})
         Me.SQLUserListViewContextMenuStrip.Name = "UserListViewContextMenuStrip"
-        Me.SQLUserListViewContextMenuStrip.Size = New System.Drawing.Size(217, 48)
+        Me.SQLUserListViewContextMenuStrip.Size = New System.Drawing.Size(264, 92)
         Me.SQLUserListViewContextMenuStrip.Text = "Выделенный элемент"
         '
         'SQLCopyFirstHashMenuItem
         '
         Me.SQLCopyFirstHashMenuItem.Name = "SQLCopyFirstHashMenuItem"
-        Me.SQLCopyFirstHashMenuItem.Size = New System.Drawing.Size(216, 22)
-        Me.SQLCopyFirstHashMenuItem.Text = "Скопировать первый хэш"
+        Me.SQLCopyFirstHashMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.SQLCopyFirstHashMenuItem.Text = "Скопировать первый хэш (Base64)"
         '
         'SQLCopySecondHashMenuItem
         '
         Me.SQLCopySecondHashMenuItem.Name = "SQLCopySecondHashMenuItem"
-        Me.SQLCopySecondHashMenuItem.Size = New System.Drawing.Size(216, 22)
-        Me.SQLCopySecondHashMenuItem.Text = "Скопировать второй хэш"
+        Me.SQLCopySecondHashMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.SQLCopySecondHashMenuItem.Text = "Скопировать второй хэш (Base64)"
         '
         'Button1
         '
@@ -423,12 +428,46 @@ Partial Class MainForm
         Me.ToolTip1.SetToolTip(Me.Button1, "https://hashkiller.co.uk/sha1-decrypter.aspx")
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(825, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(41, 13)
+        Me.Label2.TabIndex = 29
+        Me.Label2.Text = "Ver 1.3"
+        '
+        'CopyFirstHashHEXMenuItem
+        '
+        Me.CopyFirstHashHEXMenuItem.Name = "CopyFirstHashHEXMenuItem"
+        Me.CopyFirstHashHEXMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.CopyFirstHashHEXMenuItem.Text = "Скопировать первый хэш (HEX)"
+        '
+        'CopySecondHashHEXMenuItem
+        '
+        Me.CopySecondHashHEXMenuItem.Name = "CopySecondHashHEXMenuItem"
+        Me.CopySecondHashHEXMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.CopySecondHashHEXMenuItem.Text = "Скопировать второй хэш (HEX)"
+        '
+        'SQLCopyFirstHashHEXMenuItem
+        '
+        Me.SQLCopyFirstHashHEXMenuItem.Name = "SQLCopyFirstHashHEXMenuItem"
+        Me.SQLCopyFirstHashHEXMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.SQLCopyFirstHashHEXMenuItem.Text = "Скопировать первый хэш (HEX)"
+        '
+        'SQLCopySecondHashHEXMenuItem
+        '
+        Me.SQLCopySecondHashHEXMenuItem.Name = "SQLCopySecondHashHEXMenuItem"
+        Me.SQLCopySecondHashHEXMenuItem.Size = New System.Drawing.Size(263, 22)
+        Me.SQLCopySecondHashHEXMenuItem.Text = "Скопировать второй хэш (HEX)"
+        '
         'MainForm
         '
         Me.AccessibleRole = System.Windows.Forms.AccessibleRole.Application
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(873, 460)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -445,6 +484,7 @@ Partial Class MainForm
         Me.TabPage2.PerformLayout()
         Me.SQLUserListViewContextMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -488,4 +528,9 @@ Partial Class MainForm
     Friend WithEvents SQLCopyFirstHashMenuItem As ToolStripMenuItem
     Friend WithEvents SQLCopySecondHashMenuItem As ToolStripMenuItem
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents CopyFirstHashHEXMenuItem As ToolStripMenuItem
+    Friend WithEvents CopySecondHashHEXMenuItem As ToolStripMenuItem
+    Friend WithEvents SQLCopyFirstHashHEXMenuItem As ToolStripMenuItem
+    Friend WithEvents SQLCopySecondHashHEXMenuItem As ToolStripMenuItem
 End Class

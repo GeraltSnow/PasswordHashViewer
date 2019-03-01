@@ -232,19 +232,19 @@ Public Class MainForm
     End Sub
 
     Private Sub CopyFirstHashMenuItem_Click(sender As Object, e As EventArgs) Handles CopyFirstHashMenuItem.Click
-        Clipboard.SetText(ListViewUsers.SelectedItems(0).SubItems(2).Text)
+        Clipboard.SetText(ListViewUsers.SelectedItems(0).SubItems(1).Text)
     End Sub
 
     Private Sub CopySecondHashMenuItem_Click(sender As Object, e As EventArgs) Handles CopySecondHashMenuItem.Click
-        Clipboard.SetText(ListViewUsers.SelectedItems(0).SubItems(3).Text)
+        Clipboard.SetText(ListViewUsers.SelectedItems(0).SubItems(2).Text)
     End Sub
 
     Private Sub SQLCopyFirstHashMenuItem_Click(sender As Object, e As EventArgs) Handles SQLCopyFirstHashMenuItem.Click
-        Clipboard.SetText(SQLUserList.SelectedItems(0).SubItems(2).Text)
+        Clipboard.SetText(SQLUserList.SelectedItems(0).SubItems(1).Text)
     End Sub
 
     Private Sub SQLCopySecondHashMenuItem_Click(sender As Object, e As EventArgs) Handles SQLCopySecondHashMenuItem.Click
-        Clipboard.SetText(SQLUserList.SelectedItems(0).SubItems(3).Text)
+        Clipboard.SetText(SQLUserList.SelectedItems(0).SubItems(2).Text)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -329,5 +329,33 @@ Public Class MainForm
             CType(sender, TextBox).ForeColor = Color.LightGray
             CType(sender, TextBox).Tag = False
         End If
+    End Sub
+
+    Private Sub CopyFirstHashHEXMenuItem_Click(sender As Object, e As EventArgs) Handles CopyFirstHashHEXMenuItem.Click
+        Dim base64hash = ListViewUsers.SelectedItems(0).SubItems(1).Text
+        Dim hexhash = Convert.FromBase64String(base64hash)
+        Dim hexstring = BitConverter.ToString(hexhash).Replace("-", String.Empty)
+        Clipboard.SetText(hexstring)
+    End Sub
+
+    Private Sub CopySecondHashHEXMenuItem_Click(sender As Object, e As EventArgs) Handles CopySecondHashHEXMenuItem.Click
+        Dim base64hash = ListViewUsers.SelectedItems(0).SubItems(2).Text
+        Dim hexhash = Convert.FromBase64String(base64hash)
+        Dim hexstring = BitConverter.ToString(hexhash).Replace("-", String.Empty)
+        Clipboard.SetText(hexstring)
+    End Sub
+
+    Private Sub SQLCopyFirstHashHEXMenuItem_Click(sender As Object, e As EventArgs) Handles SQLCopyFirstHashHEXMenuItem.Click
+        Dim base64hash = SQLUserList.SelectedItems(0).SubItems(1).Text
+        Dim hexhash = Convert.FromBase64String(base64hash)
+        Dim hexstring = BitConverter.ToString(hexhash).Replace("-", String.Empty)
+        Clipboard.SetText(hexstring)
+    End Sub
+
+    Private Sub SQLCopySecondHashHEXMenuItem_Click(sender As Object, e As EventArgs) Handles SQLCopySecondHashHEXMenuItem.Click
+        Dim base64hash = SQLUserList.SelectedItems(0).SubItems(2).Text
+        Dim hexhash = Convert.FromBase64String(base64hash)
+        Dim hexstring = BitConverter.ToString(hexhash).Replace("-", String.Empty)
+        Clipboard.SetText(hexstring)
     End Sub
 End Class
